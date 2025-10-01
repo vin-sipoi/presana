@@ -1,0 +1,8 @@
+secrets/
+node_modules
+verify*
+UIUX.md
+TRANSACTION_ANALYSIS_PLAN.md
+ ENOKI_ALLOWLIST_TARGETS.txt
+prog.md
+
