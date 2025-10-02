@@ -1,16 +1,16 @@
 /**
- * Custom hook for SUI-Lens transactions with Enoki zkLogin
+ * Custom hook for SUI-Lens transactions
  * Provides easy-to-use functions for all contract interactions
  */
 
 'use client';
 
-import { useEnokiTransaction } from './useEnokiTransaction';
+
 import SuiLensTransactions from '@/lib/sui-lens-transactions';
 import { toast } from 'sonner';
 
 export function useSuiLensTransaction() {
-  const { signAndExecuteTransaction, isConnected, address } = useEnokiTransaction();
+  
 
   // Helper to execute any transaction
   const execute = async (

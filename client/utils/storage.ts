@@ -56,15 +56,9 @@ export interface UserData {
   picture?: string;
   googleId?: string;
   googleToken?: string;
-  isEnoki?: boolean;
   jwt?: string;
 }
 
-export interface EnokiSessionData {
-  jwt: string;
-  address: string;
-  expiresAt: number;
-}
 
 // Storage type enum
 export enum StorageType {

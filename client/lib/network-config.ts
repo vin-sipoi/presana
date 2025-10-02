@@ -3,8 +3,7 @@ import { getFullnodeUrl } from '@mysten/sui/client';
 // Supported network types
 export type SuiNetwork = 'testnet' | 'mainnet' | 'devnet' | 'localnet';
 
-// Enoki supported network types (Enoki only supports testnet and mainnet)
-export type EnokiNetwork = 'testnet' | 'mainnet';
+
 
 /**
  * Centralized network configuration for SUI Lens
@@ -94,20 +93,4 @@ export function isSupportedNetwork(network: string): boolean {
   return ['testnet', 'mainnet', 'devnet', 'localnet'].includes(network);
 }
 
-/**
- * Get Enoki network configuration
- * Converts network string to proper Enoki network type
- * Enoki only supports testnet and mainnet, defaults to testnet for other networks
- */
-export function getEnokiNetwork(): EnokiNetwork {
-  const network = process.env.NEXT_PUBLIC_SUI_NETWORK;
-  const suiNetwork = (network as SuiNetwork) || 'testnet';
-  
-  // Enoki only supports testnet and mainnet
-  if (suiNetwork === 'testnet' || suiNetwork === 'mainnet') {
-    return suiNetwork;
-  }
-  
-  // Default to testnet for unsupported networks
-  return 'testnet';
-}
+

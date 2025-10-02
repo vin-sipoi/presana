@@ -133,7 +133,7 @@ export const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   useEffect(() => {
     if (!isInitialized || !user) return;
 
-    // Save user data without walletAddress (walletAddress comes from session/Enoki)
+    // Save user data without walletAddress (walletAddress comes from session)
     const userDataToSave = { ...user };
     delete userDataToSave.walletAddress;
 

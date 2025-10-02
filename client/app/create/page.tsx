@@ -38,8 +38,6 @@ import { mintPOAP, suilensService } from "@/lib/sui-client"
 import Header from '@/components/Header'
 import { uploadImageToImgBB, validateImageFile } from '@/utils/imageUtils'
 import { toast } from 'sonner'
-import { useSponsoredTransaction } from '@/hooks/useSponsoredTransaction'
-import { Transaction } from '@mysten/sui/transactions'
 import LocationInput from '@/components/LocationInput'
 import { events } from "@/lib/community"
 import { eventAPI } from '@/lib/api'
@@ -49,7 +47,7 @@ export default function CreateEventPage() {
   const router = useRouter()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { addEvent } = useEventContext()
-  const { sponsorAndExecute, isConnected } = useSponsoredTransaction()
+
 
   // Redirect to signin if not logged in
   useEffect(() => {
@@ -351,8 +349,6 @@ export default function CreateEventPage() {
         poapTemplate: poapData.name || '',
       })
       
-      // Execute the transaction with Enoki zkLogin
-      const result = await sponsorAndExecute({ tx })
       console.log('Create event transaction result:', result)
 
       // Event created successfully onchain
