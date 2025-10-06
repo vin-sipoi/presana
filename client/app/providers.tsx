@@ -13,6 +13,7 @@ const WalletProvider = dynamic(() => import('@mysten/dapp-kit').then(mod => mod.
 
 import { UserProvider } from '../context/UserContext';
 import { EventProvider } from '../context/EventContext';
+import { RegisterEnokiWallets } from '../app/enokiwallets/registerEnokiWallets';
 
 // Initialize QueryClient
 const queryClient = new QueryClient();
@@ -73,6 +74,7 @@ export default function Providers({ children }: { children: ReactNode }) {
 		<QueryClientProvider client={queryClient}>
 			<SuiClientProvider networks={networks} defaultNetwork="mainnet">
 				<WalletProvider autoConnect={true} storageKey="sui-wallet-kit">
+					<RegisterEnokiWallets />
 					<UserProvider>
 						<EventProvider>{children}</EventProvider>
 					</UserProvider>

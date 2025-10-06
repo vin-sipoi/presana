@@ -3,8 +3,11 @@ import {
 	useCurrentAccount,
 	useDisconnectWallet,
 	useConnectWallet,
+	useWallets,
 } from '@mysten/dapp-kit';
+import { isEnokiWallet, type EnokiWallet, type AuthProvider } from '@mysten/enoki';
 import { Menu, X, Wallet } from 'lucide-react';
+import { FcGoogle } from 'react-icons/fc';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
@@ -13,7 +16,7 @@ import { ProfileDropdown } from '../app/landing/ProfileDropDown';
 import { useUser } from '@/context/UserContext';
 import { WalletConnect } from '@/components/auth/WalletConnect';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
-import { GoogleLogin } from '@/components/auth/GoogleLogin';
+
 import { Button } from '@/components/ui/button';
 
 export default function Header() {
@@ -24,6 +27,13 @@ export default function Header() {
 	const account = useCurrentAccount();
 	const disconnectWallet = useDisconnectWallet();
 	const { mutate: connectWallet } = useConnectWallet();
+	const wallets = useWallets().filter(isEnokiWallet);
+	const walletsByProvider = wallets.reduce(
+		(map, wallet) => map.set(wallet.provider, wallet),
+		new Map<AuthProvider, EnokiWallet>(),
+	);
+	const googleWallet = walletsByProvider.get('google');
+	const facebookWallet = walletsByProvider.get('facebook');
 	const router = useRouter();
 	const pathname = usePathname();
 
@@ -177,11 +187,17 @@ export default function Header() {
                   </DialogHeader>
                   <div className="py-4">
                     <p className="text-sm text-[#888888] mb-6">A wallet will be assigned to you when you create an account.</p>
-                    <GoogleLogin className="w-full text-[#101928] bg-white border-2 rounded-2xl flex items-center justify-center gap-2" />
-                    <Button onClick={() => (connectWallet as any)()} className="w-full mt-4 bg-[#4DA2FF] text-white rounded-2xl flex items-center justify-center gap-2">
-                      <Wallet className="w-5 h-5" />
-                      Connect Wallet
-                    </Button>
+                    <div className="space-y-3">
+                      {googleWallet && (
+                        <Button
+                          onClick={() => connectWallet({ wallet: googleWallet })}
+                          className="w-full text-[#101928] bg-white border-2 rounded-2xl flex items-center justify-center gap-2 hover:bg-gray-50"
+                        >
+                          <FcGoogle className="w-5 h-5" />
+                          Continue with Google
+                        </Button>
+                      )}
+                    </div>
                   </div>
                   <DialogFooter />
                 </DialogContent>
@@ -252,11 +268,17 @@ export default function Header() {
                       </DialogHeader>
                       <div className="py-4">
                         <p className="text-sm text-[#888888] mb-6">A wallet will be assigned to you when you create an account.</p>
-                        <GoogleLogin className="w-full text-[#101928] bg-[#D0D5DD] flex items-center justify-center gap-2" />
-                        <Button onClick={() => (connectWallet as any)()} className="w-full mt-4 bg-[#4DA2FF] text-white rounded-2xl flex items-center justify-center gap-2">
-                          <Wallet className="w-5 h-5" />
-                          Connect Wallet
-                        </Button>
+                        <div className="space-y-3">
+                          {googleWallet && (
+                            <Button
+                              onClick={() => connectWallet({ wallet: googleWallet })}
+                              className="w-full text-[#101928] bg-white border-2 rounded-2xl flex items-center justify-center gap-2 hover:bg-gray-50"
+                            >
+                              <FcGoogle className="w-5 h-5" />
+                              Continue with Google
+                            </Button>
+                          )}
+                        </div>
                       </div>
                       <DialogFooter />
                     </DialogContent>

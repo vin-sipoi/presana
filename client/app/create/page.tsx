@@ -303,7 +303,7 @@ export default function CreateEventPage() {
       }
 
       // Check if user has wallet connection
-      if (!isConnected) {
+      if (!user?.walletAddress) {
         toast.error('Please connect your wallet before creating an event')
         setIsCreating(false)
         return
@@ -348,14 +348,14 @@ export default function CreateEventPage() {
         requiresApproval: eventData.requiresApproval,
         poapTemplate: poapData.name || '',
       })
-      
-      console.log('Create event transaction result:', result)
+
+      console.log('Create event transaction result:', tx)
 
       // Event created successfully onchain
       toast.success('Event created successfully!')
 
       // Extract event ID from transaction result
-      const eventId = result?.effects?.created?.[0]?.reference?.objectId || result?.digest
+      const eventId = tx?.effects?.created?.[0]?.reference?.objectId || tx?.digest
 
 
 
