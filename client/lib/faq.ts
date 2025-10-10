@@ -1,15 +1,15 @@
 export const faqs = [
     {
-      question: "Who can create events on Suilens?",
-      answer: "Anyone can create events on Suilens. Whether you're an individual organizer, community leader, or organization, you can easily set up and manage events on our platform."
+      question: "Who can create events on Presana?",
+      answer: "Anyone can create events on Presana. Whether you're an individual organizer, community leader, or organization, you can easily set up and manage events on our platform."
     },
     {
-      question: "What are the pricing details for Suilens?",
-      answer: "Suilens offers flexible pricing plans to suit different needs. Basic event creation is free, with premium features available through our subscription plans."
+      question: "What are the pricing details for Presana?",
+      answer: "Presana offers flexible pricing plans to suit different needs. Basic event creation is free, with premium features available through our subscription plans."
     },
     {
-      question: "Are there any commercial collaborations at SuiLens you are part of during your events?",
-      answer: "SuiLens partners with various organizations in the Sui ecosystem to enhance event experiences and provide additional value to our community."
+      question: "Are there any commercial collaborations at Presana you are part of during your events?",
+      answer: "Presana partners with various organizations in the Sui ecosystem to enhance event experiences and provide additional value to our community."
     },
     {
       question: "Who can't sign up to create an event?",

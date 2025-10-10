@@ -113,7 +113,7 @@ export default function Header() {
               className="sm:w-7 sm:h-7 object-contain"
             />
             <span className="text-base sm:text-lg font-semibold text-[#020B15]">
-              Suilens
+              Presana
             </span>
           </Link>
 

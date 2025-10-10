@@ -82,7 +82,7 @@ export default function HomePage() {
 									Your <br /> community<br />starts here
 								</h1>
 								<p className="md:text-xl font-normal sm:font-normal sm:text-xs text-[#3A4A5C] max-w-2xl leading-relaxed mx-auto lg:mx-0">
-									From meetups to big programs, Suilens makes it easy to find, host, and connect with the Sui community
+									From meetups to big programs, Presana makes it easy to find, host, and connect with the Sui community
 								</p>
 							</div>
 							<div className="flex flex-row gap-2 sm:gap-4 pt-2 justify-center lg:justify-start">
@@ -238,11 +238,11 @@ export default function HomePage() {
                         </div>
                     </div>
 					<h2 className="text-3xl sm:text-5xl md:font-bold sm:font-normal text-[#1A2530] text-center mb-4 font-inter">
-						Suilens is where <br /> Communities Bring <br />Events  Onchain
+						Presana is where <br /> Communities Bring <br />Events  Onchain
 						
 					</h2>
 					<p className="text-base sm:text-lg text-[#3A4A5C] text-center max-w-xl font-inter">
-						Suilens brings people together through events and bounties. A place to connect, collaborate, and grow with the community.
+						Presana brings people together through events and bounties. A place to connect, collaborate, and grow with the community.
 					</p>
 				</div>
 			</section>

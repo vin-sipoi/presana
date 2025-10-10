@@ -70,12 +70,12 @@ const FooterSection = () => {
                   <div className="w-8 h-8 rounded-lg flex items-center justify-center">
                     <img
                       src="https://i.ibb.co/PZHSkCVG/Suilens-Logo-Mark-Suilens-Black.png"
-                      alt="Suilens Logo"
+                      alt="Presana Logo"
                       className="w-8 h-8 object-contain"
                     />
                   </div>
                   <span className="text-xl font-bold text-gray-900">
-                    Suilens
+                    Presana
                   </span>
                 </div>
               </div>
@@ -85,7 +85,7 @@ const FooterSection = () => {
 
             {/* Right side - Copyright */}
             <p className="text-sm font-medium text-gray-600">
-              © 2025. SuiLens. All Rights Reserved.
+              © 2025. Presana. All Rights Reserved.
             </p>
           </div>
         </div>

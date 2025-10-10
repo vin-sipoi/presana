@@ -148,7 +148,7 @@ export default function AdminDashboard() {
       {/* Top Navigation */}
       <header className="w-full bg-white border-b border-gray-100 flex items-center justify-between px-8 py-4">
         <div className="flex items-center gap-4">
-          <img src="/placeholder-logo.svg" alt="Suilens" className="h-7 w-auto" />
+          <img src="/placeholder-logo.svg" alt="Presana" className="h-7 w-auto" />
         </div>
         <nav className="flex-1 flex justify-center">
           <ul className="flex gap-8 text-sm font-medium text-gray-500">
@@ -169,7 +169,7 @@ export default function AdminDashboard() {
         {/* Sidebar */}
         <aside className="w-72 bg-[#0B1620] h-full min-h-screen flex flex-col py-10 px-8">
           <div className="mb-10">
-            <img src="/placeholder-logo.svg" alt="Suilens" className="h-7 w-auto mb-8" />
+            <img src="/placeholder-logo.svg" alt="Presana" className="h-7 w-auto mb-8" />
           </div>
           <nav className="flex-1">
             <ul className="space-y-2 text-gray-400 text-base">

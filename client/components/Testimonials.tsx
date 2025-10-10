@@ -9,7 +9,7 @@ const testimonials = [
     img: '/commmember1.png',
   },
   {
-    text: "Suilens literally took all the problems associated with sui events and solved them with one product...",
+    text: "Presana literally took all the problems associated with sui events and solved them with one product...",
     name: 'Tobi',
     handle: '@sheisTobi_',
     img: '/commmember3.png',
@@ -23,7 +23,7 @@ const testimonials = [
   },
 
   {
-    text: "Suilens has taken events transparency to another level! Head counts, events attendances, etc are now onchain with Suilens. Can’t wait to see Sui protocols use this tool for their events all over the world. Im convinced this is definitely, the dynamic tool for the present, and the future of events in our beloved ecosystem.",
+    text: "Presana has taken events transparency to another level! Head counts, events attendances, etc are now onchain with Presana. Can’t wait to see Sui protocols use this tool for their events all over the world. Im convinced this is definitely, the dynamic tool for the present, and the future of events in our beloved ecosystem.",
     name: 'Zibah.sui',
     handle: '@ZibahTheCreator',
     img: '/commmember4.png',

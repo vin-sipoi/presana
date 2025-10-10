@@ -7,8 +7,8 @@ import Providers from './providers';
 import { Toaster } from 'sonner';
 
 export const metadata: Metadata = {
-	title: 'Suilens',
-	description: 'From hosting to attending, create, join, and earn your badge with Suilens',
+	title: 'Presana',
+	description: 'From hosting to attending, create, join, and earn your badge with Presana',
 	generator: 'v0.dev',
 };
 

@@ -190,7 +190,7 @@ export default function CheckinPage() {
       let errorMsg = 'Failed to check in and claim POAP'
 
       if (error.message.includes('Invalid QR code')) {
-        errorMsg = 'Invalid QR code. Please scan a valid SuiLens event check-in QR code.'
+        errorMsg = 'Invalid QR code. Please scan a valid Presana event check-in QR code.'
       } else if (error.message.includes('expired')) {
         errorMsg = 'QR code has expired. Please ask the event organizer for a new one.'
       } else if (error.message.includes('wallet')) {
@@ -229,7 +229,7 @@ export default function CheckinPage() {
           <CardContent className="p-6 text-center">
             <XCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
             <h2 className="text-xl font-semibold text-gray-900 mb-2">Invalid QR Code</h2>
-            <p className="text-gray-600">This QR code is not a valid SuiLens check-in code.</p>
+            <p className="text-gray-600">This QR code is not a valid Presana check-in code.</p>
           </CardContent>
         </Card>
       </div>
@@ -244,12 +244,12 @@ export default function CheckinPage() {
           <div className="flex items-center space-x-3">
             <Image
               src="https://i.ibb.co/PZHSkCVG/Suilens-Logo-Mark-Suilens-Black.png"
-              alt="Suilens Logo"
+              alt="Presana Logo"
               width={40}
               height={40}
               className="object-contain"
             />
-            <span className="text-2xl font-bold text-[#020B15]">Suilens</span>
+            <span className="text-2xl font-bold text-[#020B15]">Presana</span>
           </div>
         </div>
       </header>
